@@ -24,6 +24,7 @@
 
 ## Split windows
 
-- New splits to the right (instead of to the left)
+- New splits to the right and bottom
 
 ## + CapsLock remap to Escape
+
