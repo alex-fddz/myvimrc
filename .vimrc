@@ -25,6 +25,20 @@ set splitbelow
 au VimEnter * :silent !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 au VimLeave * :silent !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
 
+" Status Line
+set laststatus=2
+set statusline+=\%#Search#
+set statusline+=\[%n] " buffer number
+set statusline+=\ %f " rel path to the file in buffer 
+set statusline+=\ %m " modified flag
+set statusline+=\ %= " separator
+set statusline+=\%y " type of the file in buffer
+set statusline+=\%#CursorLineNr#
+set statusline+=\ %l " current line number
+set statusline+=\/%L " total number of lines
+set statusline+=\(%p%%) " percentage through file in lines
+set statusline+=\:%c " column number
+
 " Insert mode remaps / auto-completions
 " - Double Quotes
 inoremap "      ""<Left>
