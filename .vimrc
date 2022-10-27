@@ -1,5 +1,7 @@
 " Line config
+syntax on
 set number
+set relativenumber
 "set nowrap
 set scrolloff=4
 
@@ -30,14 +32,15 @@ set laststatus=2
 set statusline+=\%#Search#
 set statusline+=\[%n] " buffer number
 set statusline+=\ %f " rel path to the file in buffer 
-set statusline+=\ %m " modified flag
+set statusline+=\ %r " read only flag
+set statusline+=\%m " modified flag
 set statusline+=\ %= " separator
 set statusline+=\%y " type of the file in buffer
 set statusline+=\%#CursorLineNr#
+set statusline+=\ (%p%%) " percentage through file in lines
 set statusline+=\ %l " current line number
 set statusline+=\/%L " total number of lines
-set statusline+=\(%p%%) " percentage through file in lines
-set statusline+=\:%c " column number
+set statusline+=\ :\ %c " column number
 
 " Insert mode remaps / auto-completions
 " - Double Quotes
