@@ -1,9 +1,11 @@
 " Line config
 syntax on
 set number
-set relativenumber
+"set relativenumber
 "set nowrap
 set scrolloff=4
+"set cursorline
+":highlight Cursorline cterm=bold ctermbg=black
 
 " Tabs config
 set tabstop=4 softtabstop=4
@@ -26,6 +28,10 @@ set splitbelow
 " Remap CapsLock to Esc
 au VimEnter * :silent !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 au VimLeave * :silent !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
+
+" F9 runs `build.sh`
+nnoremap <silent> <F9> :w<CR>:!sh build.sh<CR>
+inoremap <silent> <F9> <Esc>:w<CR>:!sh build.sh<CR>
 
 " Status Line
 set laststatus=2
@@ -59,3 +65,5 @@ inoremap []     []
 inoremap {      {}<Left>
 inoremap {<CR>  {<CR>}<Esc>O
 inoremap {}     {}
+
+set showmatch
